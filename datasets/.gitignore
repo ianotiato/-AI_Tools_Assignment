@@ -1,0 +1,11 @@
+# Ignore large dataset files
+*.pkl
+*.h5
+*.npy
+*.npz
+large_*.csv
+
+# Keep only our small sample files
+!amazon_reviews_sample.csv
+!iris.csv
+!mnist_samples/

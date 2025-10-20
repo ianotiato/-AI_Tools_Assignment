@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+from tensorflow.keras.datasets import mnist
+import os
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+os.makedirs('datasets/processed/mnist_samples', exist_ok=True)
+
+# Save first 10 samples as images
+for i in range(10):
+    plt.imsave(f'datasets/processed/mnist_samples/sample_{i}_label_{y_train[i]}.png',
+               x_train[i], cmap='gray')

@@ -1,0 +1,33 @@
+import pandas as pd
+
+# Sample Amazon reviews data
+sample_reviews = [
+    {
+        'review_text': "I bought the Apple iPhone 13 from Amazon and it's amazing! The camera quality is superb.",
+        'rating': 5,
+        'product': 'Electronics'
+    },
+    {
+        'review_text': "The Samsung Galaxy phone I received had battery issues. Very disappointed with this product.",
+        'rating': 2,
+        'product': 'Electronics'
+    },
+    {
+        'review_text': "Microsoft Surface Pro is a great device for work, but the price is too high.",
+        'rating': 4,
+        'product': 'Computers'
+    },
+    {
+        'review_text': "I love my new Sony headphones! The sound quality is incredible and they're very comfortable.",
+        'rating': 5,
+        'product': 'Electronics'
+    },
+    {
+        'review_text': "The Dell laptop stopped working after 2 months. Worst purchase ever.",
+        'rating': 1,
+        'product': 'Computers'
+    }
+]
+
+df_reviews = pd.DataFrame(sample_reviews)
+df_reviews.to_csv('datasets/raw/amazon_reviews_sample.csv', index=False)
